@@ -92,8 +92,8 @@ app.get("/", (req, res) => {
   res.send(`<h2>App running on port ${PORT}</h2>`);
 });
 
-app.get("/hello", (req, res) => {
-  res.send(`<h2>Hello Update Here</h2>`);
+app.get("/Hi", (req, res) => {
+  res.send(`<h2>Say HI, from mongo DB</h2>`);
 });
 
 app.listen(PORT, () => {
