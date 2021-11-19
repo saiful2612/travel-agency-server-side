@@ -45,7 +45,7 @@ async function run() {
       const result = await tourCollection.insertOne(req.body);
       res.json(result);
     });
-    /* ==================== Orders Api ========================= */
+    /* ==================== Orders Api ===================== */
     //GET API
     app.get("/orders", async (req, res) => {
       const result = await orderCollection.find({});
@@ -90,6 +90,10 @@ run().catch(console.dir);
 
 app.get("/", (req, res) => {
   res.send(`<h2>App running on port ${PORT}</h2>`);
+});
+
+app.get("/hello", (req, res) => {
+  res.send(`<h2>Hello Update Here</h2>`);
 });
 
 app.listen(PORT, () => {
